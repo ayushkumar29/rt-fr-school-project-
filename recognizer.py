@@ -18,7 +18,7 @@ for imagePath in imagePaths:
     img_numpy = np.array(PIL_img,'uint8')
 
     name = str(os.path.split(imagePath)[-1].split(".")[2])
-    if name in names:                      #checking the names if it exist or not !!!
+    if name in names:                                   #checking the names if it exist or not !!!
       conitnue
     
     else:
@@ -72,7 +72,7 @@ while True:
             id = names[id]
             confidence = "  {0}%".format(round(confidence))
         else:
-            id = "unknown"
+            id = "unknown person !!( bhag yaha se)"
             confidence = "  {0}%".format(round(confidence))
         
         cv2.putText(img, str(id), (x+5,y-5), font, 1, (255,255,255), 2)
