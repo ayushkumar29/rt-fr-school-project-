@@ -18,10 +18,9 @@ for imagePath in imagePaths:
     img_numpy = np.array(PIL_img,'uint8')
 
     name = str(os.path.split(imagePath)[-1].split(".")[2])
-    if name in names:                           #checking the names if it exist or not !!!
-        print("entered name is already in list")
-        time.sleep(10)
-        exit     #------------------------------ it will kill kernel and python will exited
+    if name in names:                      #checking the names if it exist or not !!!
+      conitnue
+    
     else:
         names.append(name)
 recognizer = cv2.face.LBPHFaceRecognizer_create()
